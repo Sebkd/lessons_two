@@ -4,7 +4,7 @@
 # функцию input() .
 user_list = []
 while True:
-    print('Для окончания формирования списка введите "Нет" ')
+    print('Для окончания формирования списка введите "нет" ')
     user_list.append(input('Введите очередной элемент списка \n'))
     if ('нет' in user_list):
         user_list.pop()
