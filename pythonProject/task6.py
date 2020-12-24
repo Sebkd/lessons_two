@@ -31,5 +31,19 @@ while True:
                                'количество': int(in_data[2]),
                                'eд' : str(in_data[3])})
     my_structure.append(in_data_tuple)
-    print('[\n {0} \n ]'.format(*my_structure), sep="\n")
-print('[\n {0} \n ]'.format(*my_structure), sep="\n")
+#    print('[', *my_structure, ']', sep="\n")
+    counter += 1
+print('[', *my_structure, ']', sep="\n")
+my_list_key = list((list(my_structure[0])[1]).keys())
+print(my_list_key)
+list_of_products = []
+list_of_costs = []
+list_of_quantiny = []
+list_of_units = []
+for number in range(len(my_structure)):
+    list_of_products.append(dict(list(my_structure[number])[1]).get(my_list_key[0]))
+    list_of_costs.append(dict(list(my_structure[number])[1]).get(my_list_key[1]))
+    list_of_quantiny.append(dict(list(my_structure[number])[1]).get(my_list_key[2]))
+    list_of_units.append(dict(list(my_structure[number])[1]).get(my_list_key[3]))
+
+
