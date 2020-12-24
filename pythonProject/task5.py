@@ -9,9 +9,10 @@
 # Набор натуральных чисел можно задать непосредственно в коде, например, my_list = [7, 5, 3,
 # 3, 2].
 my_list = [90, 2, 45, 3, 67, 900, 34, 2, 1, 0]
+my_list.sort()
+my_list.reverse()
 while True:
-    my_list.sort()
-    my_list.reverse()
+
     print('Для окончания формирования списка введите 999 ')
     print(my_list)
     try:
@@ -24,7 +25,7 @@ while True:
     if int(my_list.count(user_answer)) == 0:
         for counter in range(len(my_list)):
             if user_answer > my_list[counter]:
-                my_list.insert(counter+1, user_answer)
+                my_list.insert(counter, user_answer)
                 break
     else:
         my_list.insert(my_list.index(user_answer) + int(my_list.count(user_answer)), user_answer)
