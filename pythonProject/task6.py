@@ -46,4 +46,3 @@ print('{')
 for key, values in analitic_dict.items():
     print(key, values)
 print('}')
-
